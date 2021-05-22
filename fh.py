@@ -4,7 +4,10 @@ list_of_short_word = []
 
 word = "I lol and it was nice on my side"
 another_word = 'a man can speak for a women lol'
+test_word = ''
 seperated = another_word.split(' ')
+
+# print(seperated)
 new_word = []
 new_i = ''
 
@@ -15,21 +18,20 @@ new_i = ''
 with open('file.txt') as temp:
    dataFile = temp.readlines()
 
-for line in dataFile:
-    for i in seperated:
-        if i + ':' in line:
-            new_i = i;
-            new_word.append(line.split(i+': '))
-            # print(line)
+for i in range(len(seperated)):
+    for line in dataFile:
+        if seperated[i] + ':' in line:
+        #    i = new_word.append(line.split(i+': '))
+           test_word = line.split(seperated[i]+': ')
+           test_word = test_word[1]
+           seperated[i] = test_word.strip()
+           
+        #    print(test_word)        
+            # new_i = i
+            # new_word.append(line.split(i+': '))
             
-    # if 'man'+':' in line:
-    #     print("word is found ")
-    #     # print(line)
-    #     # break
-    # else:
-    #     print("not found")
-
+            
 # print (new_word)
-for w in new_word:
-    print (w)
-# print(new_word.split(new_i+': '))
+# for w in new_word:
+#     print (w)
+print(seperated)
