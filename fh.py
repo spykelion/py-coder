@@ -1,37 +1,27 @@
-print ("File handling in python")
-
-list_of_short_word = []
-
-word = "I lol and it was nice on my side"
-another_word = 'a man can speak for a women lol'
+another_word = 'reach to me asap. in my dm'
 test_word = ''
-seperated = another_word.split(' ')
 
-# print(seperated)
-new_word = []
-new_i = ''
+def remove_shorthand(word = '', file = 'file.txt'):
+    test_word = ''
+    new_word = ''
+    seperated = word.split(' ')
+    for i in range(len(seperated)):
+        seperated[i] = seperated[i].strip('\.') # remove all periods after a word
+    
+    # open the file in read mode
+    with open(file) as temp:
+        dataFile = temp.readlines()
 
-# for i in seperated:
-#     print(i)
+    # loop through file word and file to check for shorthand occurrences.
+    for i in range(len(seperated)):
+        for line in dataFile:
+            if seperated[i] + ':' in line:
+                test_word = line.split(seperated[i]+': ') # create list of seperated word
+                test_word = test_word[1] # grab the second index in list
+                seperated[i] = test_word.strip('\n')
 
+    for i in range(len(seperated)):
+        new_word += seperated[i] + ' '
 
-with open('file.txt') as temp:
-   dataFile = temp.readlines()
-
-for i in range(len(seperated)):
-    for line in dataFile:
-        if seperated[i] + ':' in line:
-        #    i = new_word.append(line.split(i+': '))
-           test_word = line.split(seperated[i]+': ')
-           test_word = test_word[1]
-           seperated[i] = test_word.strip()
-           
-        #    print(test_word)        
-            # new_i = i
-            # new_word.append(line.split(i+': '))
-            
-            
-# print (new_word)
-# for w in new_word:
-#     print (w)
-print(seperated)
+    return new_word;
+# remove_shorthand("meet me in the morning asap", "file.txt")
