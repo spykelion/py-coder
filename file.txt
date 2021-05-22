@@ -1,4 +1,30 @@
+2moro: tomorrow
+2nte: tonight
+asap: as soon as possible
+ASAP: as soon as possible
+brb: be right back
+BRB: be right back
+idc: I don't care
+IDC: I don't care
+ur: your
+bc: because
+BC: because
+CU: see you
+cu: see you
+DM: direct message
+dm: direct message
+pv: private message
+PV: private message
+idk: I don't know
+IDK: I don't know
+UR: you are
+NP: no problem
 man: a man
 women: a woman
 lol: laugh out loud
+LOL: laugh out loud
+np: no problem
+nvm: never mind
+NVM: never mind
+OMG: oh my God
 speak: a vocal ability
