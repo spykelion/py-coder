@@ -1,0 +1,4 @@
+man: a man
+women: a woman
+lol: laugh out loud
+speak: a vocal ability
