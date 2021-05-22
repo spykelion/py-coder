@@ -1,3 +1,4 @@
 import fh
-word = fh.remove_shorthand("meet me in the morning asap", "file.txt")
-print(word)
+sentence = input()
+new_string = fh.remove_shorthand(sentence, "file.txt")
+print(new_string)
