@@ -1,5 +1,5 @@
 str = "This is a string that contains  and  variables and  more random"
-str = int(input("enter a string: "))
+str = input("enter a string: ")
 num_count = 0
 modulus = False
 fact = 1
